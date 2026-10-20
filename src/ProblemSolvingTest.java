@@ -81,5 +81,31 @@ public class ProblemSolvingTest {
   // Come up with ALL tests to thoroughly test minLength
   // Use your creativity here, and consider looking back at the maxLength
   // tests for inspiration
+@Test
+void testMinLength_multipleWords() {
+    // arrange
+    Set<String> input = Set.of("cat", "a", "hello");
+
+    // act
+    int actual = ProblemSolving.minLength(input);
+
+    // assert
+    assertEquals(1, actual);
+}
+
+@Test
+void testMinLength_withEmptyString() {
+    // arrange
+    Set<String> input = Set.of("cat", "", "hello");
+
+    // act
+    int actual = ProblemSolving.minLength(input);
+
+    // assert
+    assertEquals(0, actual);
+}
+
+
+
 
 }
